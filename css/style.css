@@ -323,6 +323,29 @@ body {
   text-align: center;
 }
 
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.credits {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.credit-link {
+  color: var(--primary); /* Using your red color (#D71313) */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.credit-link:hover {
+  color: #fff; /* Turns white on hover */
+  text-decoration: underline;
+}
+
 /* MOBILE OVERLAY FIXES */
 @media (max-width: 768px) {
   .hero {
