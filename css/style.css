@@ -68,7 +68,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .background-overlay {
@@ -79,6 +79,26 @@ body {
   height: 100vh;
   background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
   z-index: -1;
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-logo-wrapper {
+  margin-bottom: 30px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  padding: 10px;
+  object-fit: contain;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .hero-content h2 {
@@ -183,7 +203,7 @@ body {
 }
 
 .delay-2 {
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 @keyframes fadeUp {
@@ -192,27 +212,3 @@ body {
     transform: translateY(0);
   }
 }
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo-wrapper {
-  position: relative;
-  margin-top: 40px; /* Pushes logo downward slightly */
-  margin-right: 20px;
-}
-
-.nav-logo {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1001;
-}
-
