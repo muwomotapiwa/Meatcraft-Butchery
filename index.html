@@ -6,27 +6,43 @@
   <title>Premium Butchery | Home</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for hamburger icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <div class="background-overlay"></div>
 
   <header class="header">
     <div class="container header-flex">
-      <h1 class="logo-text">THE MEATCRAFT BUTCHERY</h1>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="delivery.html">Delivery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="cart.html">Cart</a></li>
-        </ul>
-      </nav>
+      <div class="logo-nav-group">
+        <!-- Logo + Business Name -->
+        <div class="logo-title-group">
+          <img src="assets/logo-mc.jpeg" alt="Meatcraft Logo" class="logo-img" />
+          <h1 class="logo-text">THE MEATCRAFT BUTCHERY</h1>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </header>
 
+  <!-- Rest of your content remains the same -->
   <section class="hero">
     <div class="hero-content">
       <h2 class="fade-in">Where art meets meat</h2>
