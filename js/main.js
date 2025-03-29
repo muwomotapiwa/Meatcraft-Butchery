@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Mobile Hamburger Menu =====
+  // ===== Mobile Menu Toggle =====
   const hamburger = document.querySelector(".hamburger");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav a");
-  
-  // Toggle mobile menu
-  hamburger.addEventListener("click", () => {
+
+  // Toggle compact dropdown menu
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
     nav.classList.toggle("active");
     hamburger.innerHTML = nav.classList.contains("active") 
       ? '<i class="fas fa-times"></i>' 
@@ -18,6 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.remove("active");
       hamburger.innerHTML = '<i class="fas fa-bars"></i>';
     });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove("active");
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+    }
   });
 
   // ===== Product Grid =====
