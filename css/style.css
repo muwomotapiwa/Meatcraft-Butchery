@@ -169,6 +169,7 @@ body {
   }
 }
 
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
@@ -180,20 +181,20 @@ body {
   padding-top: 80px;
 }
 
-.hero-video {
+.hero-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -2; /* Behind overlay */
+  z-index: -2;
 }
 
-.hero-video video {
+.hero-gif {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.7); /* Optional darkening */
+  filter: brightness(0.7);
 }
 
 .background-overlay {
@@ -210,16 +211,37 @@ body {
   z-index: -1;
 }
 
-/* Keep existing hero-content styles */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .hero-content h2 {
   font-size: clamp(36px, 5vw, 64px);
   color: var(--accent);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Added for better contrast */
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease forwards;
+  line-height: 1.2;
 }
 
 .hero-content p {
   color: var(--accent);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Added for better contrast */
+  font-size: clamp(16px, 2.5vw, 20px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  animation: fadeUp 1s ease forwards;
+  line-height: 1.5;
 }
 
 .btn {
@@ -233,6 +255,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
   animation: fadeUp 1s ease forwards;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -240,6 +263,7 @@ body {
   transform: translateY(-2px);
 }
 
+/* FEATURED PRODUCTS */
 .featured-section {
   padding: 100px 0;
   background: #fafafa;
@@ -290,6 +314,7 @@ body {
   color: #555;
 }
 
+/* FOOTER */
 .footer {
   background: #111;
   color: #fff;
@@ -297,6 +322,7 @@ body {
   text-align: center;
 }
 
+/* ANIMATIONS */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
