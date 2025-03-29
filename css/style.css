@@ -183,7 +183,7 @@ body {
 }
 
 .delay-2 {
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 @keyframes fadeUp {
