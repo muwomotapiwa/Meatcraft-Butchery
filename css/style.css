@@ -40,25 +40,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-/* Logo + Title Group */
-.logo-nav-group {
+/* Logo Group */
+.logo-title-group {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 5px;
   width: 100%;
 }
 
-.logo-title-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--primary);
@@ -69,7 +65,7 @@ body {
   font-size: 20px;
   color: var(--primary);
   font-weight: bold;
-  white-space: nowrap;
+  text-align: center;
 }
 
 /* Desktop Nav */
@@ -100,30 +96,58 @@ body {
   color: var(--primary);
   cursor: pointer;
   z-index: 1001;
-  padding: 5px;
+  position: absolute;
+  left: 15px;
 }
 
-/* COMPACT MOBILE MENU (Updated) */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    padding-top: 50px;
+  }
+
   .hamburger {
     display: block;
-    order: 1;
+    top: 15px;
+    left: 15px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  .logo-title-group {
+    margin-bottom: 15px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-text {
+    font-size: 18px;
+    margin-top: 5px;
   }
 
   .nav {
     position: absolute;
-    top: 100%;
-    right: 5%;
-    width: 250px;
+    top: 80px;
+    left: 5%;
+    width: 90%;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
     visibility: hidden;
     transition: var(--transition);
     z-index: 1000;
-    padding: 10px 0;
   }
 
   .nav.active {
@@ -134,17 +158,12 @@ body {
 
   .nav-links {
     flex-direction: column;
-    gap: 0;
+    padding: 15px 0;
   }
 
   .nav-links li {
-    padding: 12px 20px;
+    padding: 10px 20px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    transition: background 0.2s;
-  }
-
-  .nav-links li:hover {
-    background: rgba(215, 19, 19, 0.05);
   }
 
   .nav-links li:last-child {
@@ -152,7 +171,7 @@ body {
   }
 }
 
-/* HERO SECTION */
+/* [Rest of your existing CSS remains unchanged] */
 .hero {
   height: 100vh;
   background: url('../assets/images/hero.jpg') center/cover no-repeat;
@@ -206,7 +225,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* FEATURED PRODUCTS */
 .featured-section {
   padding: 100px 0;
   background: #fafafa;
@@ -257,7 +275,6 @@ body {
   color: #555;
 }
 
-/* FOOTER */
 .footer {
   background: #111;
   color: #fff;
@@ -265,7 +282,6 @@ body {
   text-align: center;
 }
 
-/* ANIMATIONS */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
