@@ -98,11 +98,11 @@ body {
   left: 15px;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Styles - UPDATED */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 0px; /* Updated from 50px */
   }
 
   .hamburger {
@@ -124,18 +124,18 @@ body {
   }
 
   .logo-img {
-    width: 80px;
-    height: 80px;
+    width: 60px; /* Updated from 80px */
+    height: 44px; /* Updated from 80px */
   }
 
   .logo-text {
-    font-size: 18px;
-    margin-top: 5px;
+    font-size: 12px; /* Updated from 18px */
+    margin-top: 0px; /* Updated from 5px */
   }
 
   .nav {
     position: absolute;
-    top: 80px;
+    top: 70px; /* Adjusted from 80px */
     left: 5%;
     width: 90%;
     background: #fff;
@@ -169,7 +169,7 @@ body {
   }
 }
 
-/* HERO SECTION - UPDATED FOR MOBILE OVERLAY FIX */
+/* HERO SECTION */
 .hero {
   position: relative;
   height: 100vh;
