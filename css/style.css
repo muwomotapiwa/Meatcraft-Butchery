@@ -85,24 +85,11 @@ body {
   color: var(--primary);
 }
 
-/* Mobile Hamburger */
-.hamburger {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--primary);
-  cursor: pointer;
-  z-index: 1001;
-  position: absolute;
-  left: 15px;
-}
-
-/* Mobile Menu Styles - UPDATED */
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
   .header-flex {
     flex-direction: column;
-    padding-top: 0px; /* Updated from 50px */
+    padding-top: 0px;
   }
 
   .hamburger {
@@ -124,18 +111,18 @@ body {
   }
 
   .logo-img {
-    width: 60px; /* Updated from 80px */
-    height: 44px; /* Updated from 80px */
+    width: 60px;
+    height: 44px;
   }
 
   .logo-text {
-    font-size: 12px; /* Updated from 18px */
-    margin-top: 0px; /* Updated from 5px */
+    font-size: 12px;
+    margin-top: 0px;
   }
 
   .nav {
     position: absolute;
-    top: 70px; /* Adjusted from 80px */
+    top: 70px;
     left: 5%;
     width: 90%;
     background: #fff;
@@ -169,6 +156,42 @@ body {
   }
 }
 
+/* ===== Logo Banner ===== */
+.logo-banner {
+  background: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 80px;
+  z-index: 999;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-banner.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.logo-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.banner-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-banner h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 /* HERO SECTION */
 .hero {
   position: relative;
@@ -178,7 +201,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 80px;
+  padding-top: 120px; /* Adjusted for logo banner */
 }
 
 .hero-bg {
@@ -336,13 +359,13 @@ body {
 }
 
 .credit-link {
-  color: var(--primary); /* Using your red color (#D71313) */
+  color: var(--primary);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .credit-link:hover {
-  color: #fff; /* Turns white on hover */
+  color: #fff;
   text-decoration: underline;
 }
 
