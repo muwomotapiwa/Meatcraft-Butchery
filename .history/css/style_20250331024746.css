@@ -396,12 +396,12 @@ body {
 }
 
 .hero-logo {
-  width: 280px; /* Increased from 120px */
+  width: 180px; /* Increased from 120px */
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
   /* Border radius styles */
-  border-radius: 22px; /* Soft rounded corners */
+  border-radius: 12px; /* Soft rounded corners */
   border: 3px solid rgba(255,255,255,0.2); /* Subtle white border */
   /* Optional background for better contrast */
   background-color: rgba(0,0,0,0.3);
@@ -420,7 +420,7 @@ body {
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .hero-logo {
-    width: 140px; /* Increased from 80px */
+    width: 240px; /* Increased from 80px */
     border-radius: 10px;
     border-width: 2px;
     padding: 6px;

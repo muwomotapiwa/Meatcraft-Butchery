@@ -68,20 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     productGrid.appendChild(card);
   });
 
-  // ===== Logo Banner Scroll Behavior =====
-  const logoBanner = document.querySelector('.logo-banner');
-  const header = document.querySelector('.header');
-
-  if (logoBanner) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > header.offsetHeight) {
-        logoBanner.classList.add('hide');
-      } else {
-        logoBanner.classList.remove('hide');
-      }
-    });
-  }
-
   // ===== Smooth Scrolling =====
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
