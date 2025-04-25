@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | The Meatcraft Butchery</title>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="css/products.css" />
+</head>
+<body>
+
+  <!-- Header Navigation (from index.html) -->
+  <header>
+    <nav class="custom-navbar">
+      <div class="logo-container">
+        <img src="assets/logo-mc.jpeg" alt="Meatcraft Logo" class="floating-logo" />
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <ul class="menu" id="mobileMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html" class="active">Products</a></li>
+        <li><a href="recipes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="products-wrapper">
+    <section class="category">
+      <h2>Butchery Goods</h2>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+  </main>
+
+  <!-- Shared Footer (from index.html) -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 THE MEATCRAFT BUTCHERY. All rights reserved.</p>
+      <p class="credits">Website by <a href="mailto:muomotapiwa@gmail.com" class="credit-link">KypexTech</a></p>
+    </div>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="js/main.js" defer></script>
+  <!-- Page-specific JS -->
+  <script src="js/products.js" defer></script>
+</body>
+</html>
