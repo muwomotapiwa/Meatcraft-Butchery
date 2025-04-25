@@ -67,4 +67,53 @@
   }
 }
 
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
 
+.menu {
+  display: none;
+ position: absolute;
+  top: 100%;
+  right: 0px;
+  background: #d71313;
+  list-style: none;
+  padding: 10px;
+  width: 150px;
+  z-index: 999;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  background: #d71313;
+  color: whitesmoke;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu.active {
+    display: block;
+  }
+}
