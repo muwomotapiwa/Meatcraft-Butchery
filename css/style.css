@@ -94,7 +94,7 @@ body {
   color: var(--primary);
   cursor: pointer;
   z-index: 1001;
-  position: absolute;
+  /*position: absolute;*/
   left: 15px;
 }
 
@@ -108,8 +108,8 @@ body {
   .hamburger {
     display: block;
     top: 15px;
-    left: 15px;
-    background: rgba(255,255,255,0.9);
+    right: 20px;
+    background: #d71313;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -205,8 +205,8 @@ body {
   height: 100vh;
   background: linear-gradient(
     to bottom, 
-    rgba(0, 0, 0, 0.7), 
-    rgba(0, 0, 0, 0.9)
+    rgba(0, 0, 0, 0.9), 
+    rgba(0, 0, 0, 0.1)
   );
   z-index: -1;
   pointer-events: none;
@@ -383,5 +383,107 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* New Navbar Styles */
+.custom-navbar {
+  background-color: #d71313;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 1;
+}
+
+.floating-logo {
+  width: 180px;
+  height: 135px;
+  border-radius: 20%;
+  object-fit: cover;
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: whitesmoke;
+  border-bottom: 2px solid white;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+ position: absolute;
+  top: 100%;
+  right: 20px;
+  background: #d71313;
+  list-style: none;
+  padding: 10px;
+  width: 150px;
+  z-index: 999;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.menu li a:hover {
+  background: #d71313;
+  color: whitesmoke;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .menu.active {
+    display: block;
   }
 }
